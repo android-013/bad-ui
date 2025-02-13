@@ -56,3 +56,20 @@ body {
             font-weight: bold;
             color: #555;
         }
+
+
+        .copy-btn {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .copy-btn:hover {
+            background-color: #007B9E;
+        }
+        

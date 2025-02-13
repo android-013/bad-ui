@@ -203,3 +203,16 @@ phoneSlider.addEventListener("input", () => {
     const phoneNumber = phoneSlider.value.padStart(10, "0");
     phoneOutput.textContent = phoneNumber;
 });
+
+// Elements for the Copy button
+const copyBtn = document.getElementById("copy-btn");
+
+// Function to handle the "Copy" button behavior
+copyBtn.addEventListener("click", () => {
+    // Generate random position off the screen
+    const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+    const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+
+    // Move the button to the random position
+    copyBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+});
