@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phone Number Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Number Selector</h1>
+        <button class="btn" id="country-code-btn">Country Code</button>
+        <div class="output" id="country-code-output">Country Code: +1</div>
+
+        <input type="range" class="slider" id="phone-slider" min="0" max="9999999999" step="1">
+        <div class="output">Phone Number: <span id="phone-output">0000000000</span></div>
+    </div>
+
+    <script>
+        // List of random country codes
+        const countryCodes = [
+            "+1", "+880", "+44", "+91", "+81", "+86", "+49", "+33", "+61", "+55", "+7"
+        ];
+
+        // Elements
+        const countryCodeBtn = document.getElementById("country-code-btn");
+        const countryCodeOutput = document.getElementById("country-code-output");
+        const phoneSlider = document.getElementById("phone-slider");
+        const phoneOutput = document.getElementById("phone-output");
+
+        // Generate random country code
+        countryCodeBtn.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * countryCodes.length);
+            countryCodeOutput.textContent = `Country Code: ${countryCodes[randomIndex]}`;
+        });
+
+        // Update phone number from slider
+        phoneSlider.addEventListener("input", () => {
+            const phoneNumber = phoneSlider.value.padStart(10, "0");
+            phoneOutput.textContent = phoneNumber;
+        });
+    </script>
+</body>
+</html>
