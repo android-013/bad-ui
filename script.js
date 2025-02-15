@@ -198,7 +198,6 @@ countryCodeBtn.addEventListener("click", () => {
     countryCodeOutput.textContent = `Country Code: ${countryCodes[randomIndex]}`;
 });
 
-// Update phone number from slider
 phoneSlider.addEventListener("input", () => {
     const phoneNumber = phoneSlider.value.padStart(10, "0");
     phoneOutput.textContent = phoneNumber;
