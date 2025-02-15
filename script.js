@@ -204,7 +204,6 @@ phoneSlider.addEventListener("input", () => {
     phoneOutput.textContent = phoneNumber;
 });
 
-// Elements for the Copy button
 const copyBtn = document.getElementById("copy-btn");
 
 // Function to handle the "Copy" button behavior
