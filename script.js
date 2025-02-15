@@ -192,7 +192,6 @@ const countryCodeOutput = document.getElementById("country-code-output");
 const phoneSlider = document.getElementById("phone-slider");
 const phoneOutput = document.getElementById("phone-output");
 
-// Generate random country code
 countryCodeBtn.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * countryCodes.length);
     countryCodeOutput.textContent = `Country Code: ${countryCodes[randomIndex]}`;
