@@ -205,10 +205,16 @@ phoneSlider.addEventListener("input", () => {
 const copyBtn = document.getElementById("copy-btn");
 
 copyBtn.addEventListener("click", () => {
-    // Generate random position off the screen
     const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
     const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
-
-    // Move the button to the random position
     copyBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+    randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+    randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+    copyBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+
+
+
+
 });
